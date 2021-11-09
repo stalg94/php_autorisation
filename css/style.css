@@ -52,3 +52,11 @@ button{
     text-align: center;
     color: #ff3321;
 }
+
+.none{
+    display: none;
+}
+
+.error{
+    border-bottom: 2px solid #e31e0d;
+}

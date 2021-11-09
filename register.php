@@ -15,7 +15,7 @@ if (isset($_SESSION['user'])) {
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<form action="vendor/signup.php" method="POST" enctype="multipart/form-data">
+<form>
     <label>ФИО</label>
     <input type="text" name="full_name" placeholder="Введите свое полное имя">
     <label>Логин</label>
@@ -28,17 +28,14 @@ if (isset($_SESSION['user'])) {
     <input type="password" name="password" placeholder="Введите пароль">
     <label>Подтверждение пароля</label>
     <input type="password" name="password_confirmed" placeholder="Повториет пароль">
-    <button type="submit">Зарегистрироваться</button>
+    <button type="submit" class="register-btn">Зарегистрироваться</button>
     <p>
         У вас уже есть аккаунт? - <a href="index.php">Авторизируйтесь</a>
     </p>
-    <?php
-    if (isset($_SESSION['message'])) {
-        echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
-    }
-    unset($_SESSION['message']);
-    ?>
+    <p class="msg none">Lorem ipsum dolor sit amet. </p>
 
 </form>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

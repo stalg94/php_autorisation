@@ -3,8 +3,6 @@ session_start();
 if (!$_SESSION['user']) {
     header('Location: /');
 }
-require "vendor/connect.php";
-global $connect;
 ?>
 <!doctype html>
 <html lang="en">
@@ -18,10 +16,11 @@ global $connect;
 </head>
 <body>
 <form>
-    <img src="<?php echo $_SESSION['user']['avatar']; ?>" width="300" style="display: block; text-align: center;" alt="avatar">
-    <h2 style="margin: 10px ;"> <?php echo $_SESSION['user']['full_name']; ?> </h2>
-    <a href="#"><?php echo $_SESSION['user']['email']; ?></a>
+    <img src="<?= $_SESSION['user']['avatar'] ?>" width="200" alt="">
+    <h2 style="margin: 10px 0;"><?= $_SESSION['user']['full_name'] ?></h2>
+    <a href="#"><?= $_SESSION['user']['email'] ?></a>
     <a href="vendor/logout.php" class="logout">Выход</a>
 </form>
+<script src="js/jquery-3.6.0.min.js"></script>
 </body>
 </html>
