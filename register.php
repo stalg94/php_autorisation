@@ -25,7 +25,7 @@ session_start();
     <input type="password" name="password" placeholder="Введите пароль">
     <label>Подтверждение пароля</label>
     <input type="password" name="password_confirmed" placeholder="Повториет пароль">
-    <button type="submit">Вход</button>
+    <button type="submit">Зарегистрироваться</button>
     <p>
         У вас уже есть аккаунт? - <a href="index.php">Авторизируйтесь</a>
     </p>
